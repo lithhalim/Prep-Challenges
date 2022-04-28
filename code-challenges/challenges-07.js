@@ -21,11 +21,12 @@
 //  2- The first letters of the firstName and lastName should be capital letter
 
 const objLat = (obj) => {
-    return`my name is ${obj.firstName.slice(0,1).toUpperCase()+obj.firstName.slice(1,).toLowerCase()} ${obj.lastName.slice(0,1).toUpperCase()+obj.lastName.slice(1,).toLowerCase()} I am ${obj.age} YO, ${obj.hobby}.`
+    
+    const first = obj.firstName.charAt(0).toUpperCase() + obj.firstName.slice(1);
+    const last = obj.lastName.charAt(0).toUpperCase() + obj.lastName.slice(1);
+    const full = `my name is ${first} ${last} I am ${obj.age} YO, and I love ${obj.hobby}.`
+    return full;
 };
-
-
-
 
 // -------------------------------------------------------------------------------------------------------
 
@@ -89,14 +90,15 @@ const objLat = (obj) => {
 //  2- If one of the names is null don`t add it to the full name
 
 const cvFormatter = (arr) => {
-    let add=arr
-    add=cvs.filter((a)=>a.yearsOfExperience>1).map(function({firstName,lastName}){
-        return {
-            fullName:`${lastName===null?firstName:`${firstName} ${lastName}`}}`
-        }
-    })
-    return add    
-};
+    
+    let  add=arr.filter((a)=>a.yearsOfExperience>1).map(function({firstName,lastName,tech}){
+         return {
+             fullName:`${lastName===null?firstName:`${firstName} ${lastName}`}`,
+             tech: tech
+         }
+     })
+     return add    
+ };
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------

@@ -8,7 +8,7 @@
 // for of : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of
 
 // -------------------------------------------------------------------------------------------------------
-// Challenge 01:
+// Challenge 01:s
 // Required:
 
 // You are given an object that contains name and age of some customers
@@ -133,7 +133,6 @@ const getInfo = (arr) => {
 // ]
 
 const getStudents = (arr) => {
-  // write your code here
 };
 //  ------------------------------------------------------------------------------------------------------
 
