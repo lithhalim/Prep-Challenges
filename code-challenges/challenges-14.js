@@ -88,8 +88,8 @@ const replaceWords = (str) => {
 //
 
 const arrToStr = (arr) => {
-    let start=(x.join(" ").split(" ").slice(0,5)).join(" ")
-    let end=(x.join(" ").split(" ").slice(5,)).join(" ")
+    let start=(arr.join(" ").split(" ").slice(0,5)).join(" ")
+    let end=(arr.join(" ").split(" ").slice(5,)).join(" ")
     let z=`${start},${end}`
     return z
     }
