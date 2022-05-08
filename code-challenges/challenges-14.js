@@ -24,8 +24,14 @@
 //
 
 const LastWord = (str) => {
-    let y=str.split(" ").slice(length-1)
-    return y
+    if(str.lastIndexOf(" ")===-1){
+        return str
+    }
+    else{
+        let x=str.lastIndexOf(" ")
+      return(str.slice(x,).trim())
+
+    }
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -39,8 +45,8 @@ const LastWord = (str) => {
 //  Output: "potter"
 
 const LastWord_2 = (str) => {
-    let y=str.split(" ").slice(length-1)
-    return y
+    let x=str.split(" ").slice(-1,).join("")
+    return x
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -63,17 +69,12 @@ const LastWord_2 = (str) => {
 //
 
 const replaceWords = (str) => {
-    let j={
-        I:"We",
-        am:"are",
-        was:"where"   
-    }
-    
-    
-    let k=j[str.split(" ")[0]].split(" ")
-    let h=str.split(" ").slice(1,)
-    let array=k.concat(h)
-    return array.join(" ")
+    let z=str.replace("I","We")
+let x=z.replace("was","were")
+let k=x.replace("am","are")
+return k
+
+
 }
 // -------------------------------------------------------------------------------------------------------
 

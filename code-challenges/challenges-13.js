@@ -60,11 +60,9 @@ const objectCounter = (obj) => {
 // ------------------------
 
 const stringReverse = (str) => {
-    let y=str.split(" ").reduce((a,b)=>{
-        return (` ${b+a}`)
-    },'')
-    return y
-    }
+    let z=str.split(" ").reduce((a,b)=>(`${b+' '+a}`),"").trim()
+    return z
+}
 
 // -------------------------------------------------------------------------------------------------------
 // Challenge 03:
