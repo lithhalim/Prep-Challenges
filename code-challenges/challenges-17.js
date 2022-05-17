@@ -15,7 +15,20 @@
 //
 
 const recursionPattern = (int1, int2) => {
-    // write your code here
+    let arrayvalue = [];
+    let value = int1 - int2;
+    arrayvalue.push(int1);
+    arrayvalue.push(value);
+    while (value >= 0) {
+        value = value - int2;
+        arrayvalue.push(value);
+        recursionPattern(value, int2);
+    }
+    while (value != int1) {
+        value = value + int2;
+        arrayvalue.push(value);
+    }
+    return arrayvalue;
 }
 // -------------------------------------------------------------------------------------------------------
 
